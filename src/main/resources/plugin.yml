@@ -1,0 +1,5 @@
+name: AnimalAppetite
+version: ${project.version}
+main: io.github.mrbeezwax.animalappetite.AnimalAppetite
+api-version: 1.13
+authors: [mrbeezwax]

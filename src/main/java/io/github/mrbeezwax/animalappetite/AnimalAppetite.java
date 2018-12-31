@@ -14,5 +14,6 @@ public final class AnimalAppetite extends JavaPlugin {
     @Override
     public void onDisable() {
         // Plugin shutdown logic
+        System.out.println("Plugin Disabled");
     }
 }

@@ -17,5 +17,8 @@ public class BreedEventListener implements Listener {
         Bukkit.broadcastMessage("Bred with: " + event.getBredWith().toString());
         Bukkit.broadcastMessage("Bred by: " + event.getBreeder().getName());
         Bukkit.broadcastMessage("Bred to: " + event.getEntity().getName());
+
+        event.getMother().setGlowing(true);
+        event.getFather().setGlowing(true);
     }
 }

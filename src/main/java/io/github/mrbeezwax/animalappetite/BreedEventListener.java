@@ -1,9 +1,14 @@
 package io.github.mrbeezwax.animalappetite;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityBreedEvent;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
+import org.bukkit.scoreboard.Scoreboard;
+import org.bukkit.scoreboard.Team;
 
 public class BreedEventListener implements Listener {
     public BreedEventListener(AnimalAppetite plugin) {
@@ -18,7 +23,13 @@ public class BreedEventListener implements Listener {
         Bukkit.broadcastMessage("Bred by: " + event.getBreeder().getName());
         Bukkit.broadcastMessage("Bred to: " + event.getEntity().getName());
 
-        event.getMother().setGlowing(true);
-        event.getFather().setGlowing(true);
+        Scoreboard scoreboard = Bukkit.getScoreboardManager().getNewScoreboard();
+        Team infertile = scoreboard.registerNewTeam("infertile");
+        infertile.setColor(ChatColor.DARK_RED);
+        infertile.addEntry(event.getMother().getUniqueId().toString());
+        PotionEffect potionEffect = new PotionEffect(PotionEffectType.GLOWING, 1500, 1);
+        event.getMother().addPotionEffect(potionEffect);
+//        event.getMother().setGlowing(true);
+//        event.getFather().setGlowing(true);
     }
 }

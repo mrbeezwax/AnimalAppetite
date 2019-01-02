@@ -23,13 +23,11 @@ public class BreedEventListener implements Listener {
         Bukkit.broadcastMessage("Bred by: " + event.getBreeder().getName());
         Bukkit.broadcastMessage("Bred to: " + event.getEntity().getName());
 
-        Scoreboard scoreboard = Bukkit.getScoreboardManager().getNewScoreboard();
+        Scoreboard scoreboard = Bukkit.getScoreboardManager().getMainScoreboard();
         Team infertile = scoreboard.registerNewTeam("infertile");
         infertile.setColor(ChatColor.DARK_RED);
         infertile.addEntry(event.getMother().getUniqueId().toString());
-        PotionEffect potionEffect = new PotionEffect(PotionEffectType.GLOWING, 1500, 1);
-        event.getMother().addPotionEffect(potionEffect);
-//        event.getMother().setGlowing(true);
+        event.getMother().setGlowing(true);
 //        event.getFather().setGlowing(true);
     }
 }

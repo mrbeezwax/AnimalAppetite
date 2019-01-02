@@ -15,5 +15,6 @@ public final class AnimalAppetite extends JavaPlugin {
     public void onDisable() {
         // Plugin shutdown logic
         System.out.println("Plugin Disabled");
+        this.getServer().getScoreboardManager().getMainScoreboard().getTeam("infertile").unregister();
     }
 }

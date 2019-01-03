@@ -12,6 +12,7 @@ public final class AnimalAppetite extends JavaPlugin {
         // Plugin startup logic
         System.out.println("Plugin Enabled");
         new BreedEventListener(this);
+        new FeedEventListener(this);
 
         // Scoreboard Set-Up
         scoreboard.registerNewTeam("infertile");

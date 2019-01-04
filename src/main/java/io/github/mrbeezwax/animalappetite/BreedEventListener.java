@@ -16,7 +16,6 @@ public class BreedEventListener implements Listener {
 
     @EventHandler
     public void onEntityBreed(EntityBreedEvent event) {
-        System.out.println("Breed Event");
         Team infertile = Bukkit.getScoreboardManager().getMainScoreboard().getTeam("infertile");
         infertile.addEntry(event.getMother().getUniqueId().toString());
         infertile.addEntry(event.getFather().getUniqueId().toString());
@@ -31,6 +30,6 @@ public class BreedEventListener implements Listener {
                 infertile.removeEntry(event.getMother().getUniqueId().toString());
                 infertile.removeEntry(event.getFather().getUniqueId().toString());
             }
-        }, 300000);
+        }, 360000);
     }
 }

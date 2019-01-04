@@ -5,8 +5,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scoreboard.Scoreboard;
 
 public final class AnimalAppetite extends JavaPlugin {
-    public Scoreboard scoreboard = this.getServer().getScoreboardManager().getMainScoreboard();
-
     @Override
     public void onEnable() {
         // Plugin startup logic
@@ -15,6 +13,7 @@ public final class AnimalAppetite extends JavaPlugin {
         new FeedEventListener(this);
 
         // Scoreboard Set-Up
+        Scoreboard scoreboard = this.getServer().getScoreboardManager().getMainScoreboard();
         scoreboard.registerNewTeam("infertile");
         scoreboard.getTeam("infertile").setColor(ChatColor.DARK_RED);
     }

@@ -3,7 +3,6 @@ package io.github.mrbeezwax.animalappetite;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Animals;
-import org.bukkit.entity.Creature;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -13,8 +12,8 @@ import org.bukkit.event.player.PlayerInteractEntityEvent;
 import java.util.HashMap;
 
 public class FeedEventListener implements Listener {
-    private HashMap<Entity, Integer> fedEntities = new HashMap<>();
-    private final int BREEDING_LIMIT = 3;
+//    private HashMap<Entity, Integer> fedEntities = new HashMap<>();
+//    private final int BREEDING_LIMIT = 3;
 
     public FeedEventListener(AnimalAppetite plugin) {
         plugin.getServer().getPluginManager().registerEvents(this, plugin);

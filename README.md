@@ -14,4 +14,4 @@ After breeding completes, the parents will glow red to indicate that they are no
 - Allow player to change color of indication
 
 ### Contact
-Send me a direct message on Discord @ friendlynood#1531
+Got questions, suggestions, or want a plugin created? Add me on Discord and direct message me @ friendlynood#1531

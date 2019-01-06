@@ -3,4 +3,4 @@ version: ${project.version}
 main: io.github.mrbeezwax.animalappetite.AnimalAppetite
 api-version: 1.13
 authors: [mrbeezwax]
-description: Visually display which animals are ready to be bred again and change breeding requirements
+description: Indicate which animals are ready to be bred again and allows the server to change number of food required for breeding

@@ -21,6 +21,8 @@ public final class AnimalAppetite extends JavaPlugin {
         new BreedEventListener(this);
         new FeedEventListener(this);
 
+        // Config
+
         // Scoreboard Set-Up
         Scoreboard scoreboard = this.getServer().getScoreboardManager().getMainScoreboard();
         scoreboard.registerNewTeam("infertile");

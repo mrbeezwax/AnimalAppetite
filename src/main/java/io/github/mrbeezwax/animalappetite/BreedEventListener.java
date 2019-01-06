@@ -1,6 +1,7 @@
 package io.github.mrbeezwax.animalappetite;
 
 import org.bukkit.Bukkit;
+import org.bukkit.entity.Animals;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityBreedEvent;
@@ -21,6 +22,10 @@ public class BreedEventListener implements Listener {
         infertile.addEntry(event.getFather().getUniqueId().toString());
         event.getMother().setGlowing(true);
         event.getFather().setGlowing(true);
+        Animals dad = (Animals) event.getFather();
+        Animals mom = (Animals) event.getMother();
+        FeedEventListener.removeFedAnimal(dad);
+        FeedEventListener.removeFedAnimal(mom);
         Timer timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override

@@ -2,10 +2,12 @@ package io.github.mrbeezwax.animalappetite;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.EntityType;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scoreboard.Scoreboard;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -16,12 +18,18 @@ public final class AnimalAppetite extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        // Config Set-Up
+        if (!new File(getDataFolder(), "config.yml").exists()) {
+            saveDefaultConfig();
+            getLogger().info("Config file created");
+        } else {
+            getLogger().info("Config file found, loading...");
+        }
+
         // Plugin startup logic
         System.out.println("Plugin Enabled");
         new BreedEventListener(this);
         new FeedEventListener(this);
-
-        // Config
 
         // Scoreboard Set-Up
         Scoreboard scoreboard = this.getServer().getScoreboardManager().getMainScoreboard();

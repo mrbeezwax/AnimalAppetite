@@ -17,6 +17,7 @@ public class CommandSet implements CommandExecutor {
         if (command.getName().equalsIgnoreCase("aaset")) {
             try {
                 plugin.getConfig().set("breeding-requirement", Integer.parseInt(args[0]));
+                sender.sendMessage("Number of Food required for breeding set to: " + args[0]);
                 plugin.saveConfig();
             } catch (NumberFormatException e) {
                 sender.sendMessage("Incorrect syntax. Please type a number");

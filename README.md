@@ -14,7 +14,11 @@ After breeding completes, the parents will glow red to indicate that they are no
 
 ### Future Features
 - Change type of food required for breeding
-- Allow player to change color of indication
+- Change glow color
+- Change cooldown time for breeding
+
+### Known Issues
+Animals that are tamed by their owners will have the same glow color as its owner (default is white)
 
 ### Contact
 Got questions, suggestions, or want a plugin created? Add me on Discord and direct message me @ **friendlynood#1531**

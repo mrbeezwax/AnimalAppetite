@@ -26,6 +26,9 @@ public final class AnimalAppetite extends JavaPlugin {
             getLogger().info("Config file found, loading...");
         }
 
+        // Initializing Commands
+        getCommand("aaset").setExecutor(new CommandSet(this));
+
         // Plugin startup logic
         System.out.println("Plugin Enabled");
         new BreedEventListener(this);

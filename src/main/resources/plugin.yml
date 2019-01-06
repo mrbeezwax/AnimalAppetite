@@ -4,3 +4,9 @@ main: io.github.mrbeezwax.animalappetite.AnimalAppetite
 api-version: 1.13
 authors: [mrbeezwax]
 description: Indicate which animals are ready to be bred again and modifies number of food required for breeding
+commands:
+  aaset:
+    description: Set the number of food required for breeding
+    usage: /<command> <number of food>
+    permission: AnimalAppetite.aaset
+    permission-message: You don't have <permission>

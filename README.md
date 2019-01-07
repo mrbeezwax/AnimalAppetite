@@ -1,5 +1,6 @@
 # AnimalAppetite v1.1.0
 ## A Minecraft Spigot plugin - Supports Minecraft 1.13+
+## [Plugin Page](https://dev.bukkit.org/projects/animal-appetite)
 
 ### Description
 Indicate which animals are ready to be bred again and enables you to change breeding requirements

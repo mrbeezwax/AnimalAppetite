@@ -9,4 +9,4 @@ commands:
     description: Set the number of food required for breeding
     usage: /<command> <number of food>
     permission: AnimalAppetite.aaset
-    permission-message: You don't have <permission>
+    permission-message: You don't have the permission <permission>

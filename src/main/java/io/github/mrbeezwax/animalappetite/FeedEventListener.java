@@ -27,17 +27,20 @@ public class FeedEventListener implements Listener {
         Player p = event.getPlayer();
         Entity e = event.getRightClicked();
         Material hand = p.getInventory().getItemInMainHand().getType();
+        if (BREEDING_REQUIREMENT == 1) return;
         if (event.getHand() == EquipmentSlot.HAND && e instanceof Animals) {
             Animals a = (Animals) e;
             if (!a.canBreed() || !DIET_MAP.containsKey(e.getType())) return;
             if (DIET_MAP.get(e.getType()).contains(hand)) {
                 if (FED_ANIMALS_MAP.containsKey(a)) {
-                    if (FED_ANIMALS_MAP.get(a) != BREEDING_REQUIREMENT - 1) FED_ANIMALS_MAP.put(a, FED_ANIMALS_MAP.get(a) + 1);
-                    else return;
-                } else FED_ANIMALS_MAP.put(a, 1);
-                event.setCancelled(true);
+                    if (FED_ANIMALS_MAP.get(a) == BREEDING_REQUIREMENT) return;
+                    FED_ANIMALS_MAP.put(a, FED_ANIMALS_MAP.get(a) + 1);
+                } else {
+                    FED_ANIMALS_MAP.put(a, 1);
+                }
                 p.getInventory().getItemInMainHand().setAmount(p.getInventory().getItemInMainHand().getAmount() - 1);
-                p.updateInventory();
+                if (FED_ANIMALS_MAP.get(a) == BREEDING_REQUIREMENT) return;
+                event.setCancelled(true);
             }
         }
     }

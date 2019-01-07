@@ -26,7 +26,7 @@ public final class AnimalAppetite extends JavaPlugin {
         }
 
         // Initializing Commands
-        getCommand("aaset").setExecutor(new CommandSet(this));
+        getCommand("aaset").setExecutor(new CommandAASet(this));
 
         // Plugin startup logic
         System.out.println("Plugin Enabled");
@@ -35,7 +35,7 @@ public final class AnimalAppetite extends JavaPlugin {
 
         // Scoreboard Set-Up
         Scoreboard scoreboard = this.getServer().getScoreboardManager().getMainScoreboard();
-        scoreboard.registerNewTeam("infertile");
+        if (scoreboard.getTeam("infertile") == null) scoreboard.registerNewTeam("infertile");
         scoreboard.getTeam("infertile").setColor(ChatColor.DARK_RED);
 
         // HashMap Initialization
@@ -65,6 +65,5 @@ public final class AnimalAppetite extends JavaPlugin {
     public void onDisable() {
         // Plugin shutdown logic
         System.out.println("Plugin Disabled");
-        this.getServer().getScoreboardManager().getMainScoreboard().getTeam("infertile").unregister();
     }
 }

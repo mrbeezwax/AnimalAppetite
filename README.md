@@ -18,6 +18,9 @@ After breeding completes, the parents will glow red to indicate that they are no
 - Change glow color
 - Change cooldown time for breeding
 
+### Permissions
+- AnimalAppetite.aaset
+
 ### Known Issues
 - [ ] Animals that are tamed by their owners will have the same glow color as its owner (default is white)
 

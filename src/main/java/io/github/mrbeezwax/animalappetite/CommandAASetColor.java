@@ -9,7 +9,7 @@ import java.util.HashSet;
 
 public class CommandAASetColor implements CommandExecutor {
     private final AnimalAppetite plugin;
-    private static final String[] GLOW_COLOR_VALUES = new String[] { "AQUA", "BLACK", "BLUE", "DARK_AQUA", "DARK_BLUE", "DARK_GRAY", "DARK_GREEN", "DARK_PURPLE", "DARK_RED",
+    public static final String[] GLOW_COLOR_VALUES = new String[] { "AQUA", "BLACK", "BLUE", "DARK_AQUA", "DARK_BLUE", "DARK_GRAY", "DARK_GREEN", "DARK_PURPLE", "DARK_RED",
             "GOLD", "GRAY", "GREEN", "LIGHT_PURPLE", "RED", "WHITE", "YELLOW" };
     private static final HashSet<String> GLOW_COLORS = new HashSet<>(Arrays.asList(GLOW_COLOR_VALUES));
 
@@ -20,8 +20,8 @@ public class CommandAASetColor implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (command.getName().equalsIgnoreCase("aasetcolor")) {
-            String glowColor = args[0].toUpperCase();
-            if (GLOW_COLORS.contains(glowColor)) {
+            if (args.length == 1 && GLOW_COLORS.contains(args[0].toUpperCase())) {
+                String glowColor = args[0].toUpperCase();
                 plugin.getConfig().set("glow-color", glowColor);
                 sender.sendMessage("Glow Color set to: " + glowColor);
                 sender.sendMessage("Please reload the server");

@@ -14,7 +14,7 @@ public class CommandAASet implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (command.getName().equalsIgnoreCase("aaset")) {
+        if (command.getName().equalsIgnoreCase("aaset") && args.length == 1) {
             try {
                 int newReq = Integer.parseInt(args[0]);
                 if (newReq < 1) {

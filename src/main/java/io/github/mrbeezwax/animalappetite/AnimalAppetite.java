@@ -28,6 +28,7 @@ public final class AnimalAppetite extends JavaPlugin {
         // Initializing Commands
         getCommand("aaset").setExecutor(new CommandAASet(this));
         getCommand("aasetcolor").setExecutor(new CommandAASetColor(this));
+        getCommand("aasetcolor").setTabCompleter(new AASetColorTabCompleter());
 
         // Plugin startup logic
         System.out.println("Plugin Enabled");

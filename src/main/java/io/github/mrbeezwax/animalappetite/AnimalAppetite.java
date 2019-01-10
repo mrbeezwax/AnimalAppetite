@@ -30,13 +30,20 @@ public final class AnimalAppetite extends JavaPlugin {
 
         // Plugin startup logic
         System.out.println("Plugin Enabled");
+        ChatColor GLOW_COLOR = ChatColor.DARK_RED;
+        try {
+            GLOW_COLOR = ChatColor.valueOf(getConfig().getString("glow-color"));
+            getLogger().info("Glow Color Found. Setting to " + GLOW_COLOR.toString());
+        } catch (IllegalArgumentException e) {
+            getLogger().info("Color not found. Falling back to default color DARK_RED");
+        }
         new BreedEventListener(this);
         new FeedEventListener(this);
 
         // Scoreboard Set-Up
         Scoreboard scoreboard = this.getServer().getScoreboardManager().getMainScoreboard();
         if (scoreboard.getTeam("infertile") == null) scoreboard.registerNewTeam("infertile");
-        scoreboard.getTeam("infertile").setColor(ChatColor.DARK_RED);
+        scoreboard.getTeam("infertile").setColor(GLOW_COLOR);
 
         // HashMap Initialization
         DIET_MAP.put(EntityType.HORSE,

@@ -10,3 +10,9 @@ commands:
     usage: /<command> <number of food>
     permission: AnimalAppetite.aaset
     permission-message: You don't have the permission <permission>
+
+  aasetcolor:
+    description: Set the glow color
+    usage: /<command> <glow color>
+    permission: AnimalAppetite.aasetcolor
+    permission-message: You don't have the permission <permission>

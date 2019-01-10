@@ -27,13 +27,14 @@ public final class AnimalAppetite extends JavaPlugin {
 
         // Initializing Commands
         getCommand("aaset").setExecutor(new CommandAASet(this));
+        getCommand("aasetcolor").setExecutor(new CommandAASetColor(this));
 
         // Plugin startup logic
         System.out.println("Plugin Enabled");
         ChatColor GLOW_COLOR = ChatColor.DARK_RED;
         try {
             GLOW_COLOR = ChatColor.valueOf(getConfig().getString("glow-color"));
-            getLogger().info("Glow Color Found. Setting to " + GLOW_COLOR.toString());
+            getLogger().info("Glow Color Found. Setting to " + GLOW_COLOR.name());
         } catch (IllegalArgumentException e) {
             getLogger().info("Color not found. Falling back to default color DARK_RED");
         }

@@ -1,10 +1,10 @@
-# AnimalAppetite v1.1.0
+# AnimalAppetite v1.2.0
 ## A Minecraft Spigot plugin - Supports Minecraft 1.13+
 ## [Plugin Page](https://dev.bukkit.org/projects/animal-appetite)
 
 ### Description
 Indicate which animals are ready to be bred again and enables you to change breeding requirements
-After breeding completes, the parents will glow red to indicate that they are not ready to be bred. When the glow disappears, they will be able to breed again. Edit the config.yml to change the amount required to initiate breeding.
+After breeding completes, the parents will glow red to indicate that they are not ready to be bred. When the glow disappears, they will be able to breed again. Edit the config.yml to change settings.
 
 ### Commands
 /aaset - *OPs only* Sets the number of food required for breeding
@@ -12,8 +12,8 @@ After breeding completes, the parents will glow red to indicate that they are no
 
 ### Features
 - Indicate when animals are ready for breeding
-- Change number of food required for breeding
-- Change glow color
+- Set number of food required for breeding
+- Set glow color
 
 ### Future Features
 - Change type of food required for breeding

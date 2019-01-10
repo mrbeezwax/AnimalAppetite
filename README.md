@@ -8,18 +8,20 @@ After breeding completes, the parents will glow red to indicate that they are no
 
 ### Commands
 /aaset - *OPs only* Sets the number of food required for breeding
+/aasetcolor - *OPS only* Sets the glow color
 
 ### Features
 - Indicate when animals are ready for breeding
 - Change number of food required for breeding
+- Change glow color
 
 ### Future Features
 - Change type of food required for breeding
-- Change glow color
 - Change cooldown time for breeding
 
 ### Permissions
 - AnimalAppetite.aaset
+- AnimalAppetite.aasetcolor
 
 ### Known Issues
 - [ ] Animals that are tamed by their owners will have the same glow color as its owner (default is white)

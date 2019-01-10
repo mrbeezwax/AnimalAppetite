@@ -7,7 +7,8 @@ Indicate which animals are ready to be bred again and enables you to change bree
 After breeding completes, the parents will glow red to indicate that they are not ready to be bred. When the glow disappears, they will be able to breed again. Edit the config.yml to change settings.
 
 ### Commands
-/aaset - *OPs only* Sets the number of food required for breeding\n
+/aaset - *OPs only* Sets the number of food required for breeding
+
 /aasetcolor - *OPS only* Sets the glow color
 
 ### Features

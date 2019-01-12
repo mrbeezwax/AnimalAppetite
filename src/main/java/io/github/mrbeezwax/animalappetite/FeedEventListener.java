@@ -33,7 +33,7 @@ public class FeedEventListener implements Listener {
             if (!a.canBreed() || !DIET_MAP.containsKey(e.getType())) return;
             if (DIET_MAP.get(e.getType()).contains(hand)) {
                 if (FED_ANIMALS_MAP.containsKey(a)) {
-                    if (FED_ANIMALS_MAP.get(a) == BREEDING_REQUIREMENT) return;
+                    if (FED_ANIMALS_MAP.get(a) == BREEDING_REQUIREMENT) p.sendMessage("Animal is not ready to breed yet");
                     FED_ANIMALS_MAP.put(a, FED_ANIMALS_MAP.get(a) + 1);
                 } else {
                     FED_ANIMALS_MAP.put(a, 1);

@@ -1,4 +1,4 @@
-# AnimalAppetite v1.2.1
+# AnimalAppetite 1.2.1
 ## A Minecraft Spigot plugin - Supports Minecraft 1.13+
 ## [Plugin Page](https://dev.bukkit.org/projects/animal-appetite)
 

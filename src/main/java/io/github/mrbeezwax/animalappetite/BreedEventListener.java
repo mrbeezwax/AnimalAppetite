@@ -1,16 +1,20 @@
 package io.github.mrbeezwax.animalappetite;
 
 import org.bukkit.Bukkit;
+import org.bukkit.Material;
 import org.bukkit.entity.Animals;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityBreedEvent;
 import org.bukkit.scoreboard.Team;
 
+import java.util.HashSet;
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class BreedEventListener implements Listener {
+    private static final HashSet<Material> FOOD_SET = AnimalAppetite.FOOD_SET;
+
     public BreedEventListener(AnimalAppetite plugin) {
         plugin.getServer().getPluginManager().registerEvents(this, plugin);
     }
@@ -36,5 +40,9 @@ public class BreedEventListener implements Listener {
                 infertile.removeEntry(event.getFather().getUniqueId().toString());
             }
         }, 360000);
+    }
+
+    public boolean checkCorrectFood(Material food) {
+        return FOOD_SET.contains(food);
     }
 }

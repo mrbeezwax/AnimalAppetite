@@ -17,7 +17,6 @@ After breeding completes, the parents will glow red to indicate that they are no
 - Set glow color
 
 ### Future Features
-- Change type of food required for breeding
 - Change cooldown time for breeding
 
 ### Permissions

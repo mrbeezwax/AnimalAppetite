@@ -1,5 +1,6 @@
 package io.github.mrbeezwax.animalappetite;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Animals;
 import org.bukkit.entity.Entity;
@@ -26,6 +27,10 @@ public class FeedEventListener implements Listener {
     public void onEntityFeed(PlayerInteractEntityEvent event) {
         Player p = event.getPlayer();
         Entity e = event.getRightClicked();
+        if (Bukkit.getScoreboardManager().getMainScoreboard().getTeam("infertile").hasEntry(e.getUniqueId().toString())) {
+            event.setCancelled(true);
+            return;
+        }
         Material hand = p.getInventory().getItemInMainHand().getType();
         if (BREEDING_REQUIREMENT == 1) return;
         if (event.getHand() == EquipmentSlot.HAND && e instanceof Animals) {

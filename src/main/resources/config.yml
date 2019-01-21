@@ -3,3 +3,5 @@ breeding-requirement: 1
 # glow-color - Enter a glow color
 # Available Colors: AQUA, BLACK, BLUE, DARK_AQUA, DARK_BLUE, DARK_GRAY, DARK_GREEN, DARK_PURPLE, DARK_RED, GOLD, GRAY, GREEN, LIGHT_PURPLE, MAGIC, RED, WHITE, YELLOW
 glow-color: DARK_RED
+# cooldown - Enter a cooldown duration in seconds
+cooldown: 360

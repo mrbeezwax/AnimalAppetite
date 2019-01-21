@@ -10,9 +10,11 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class BreedEventListener implements Listener {
+    private final int COOLDOWN;
 
     public BreedEventListener(AnimalAppetite plugin) {
         plugin.getServer().getPluginManager().registerEvents(this, plugin);
+        COOLDOWN = plugin.getConfig().getInt("cooldown");
     }
 
     @EventHandler
@@ -35,6 +37,6 @@ public class BreedEventListener implements Listener {
                 infertile.removeEntry(event.getMother().getUniqueId().toString());
                 infertile.removeEntry(event.getFather().getUniqueId().toString());
             }
-        }, 360000);
+        }, COOLDOWN * 1000);
     }
 }

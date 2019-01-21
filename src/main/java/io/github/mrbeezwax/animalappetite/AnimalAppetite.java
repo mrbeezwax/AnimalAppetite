@@ -11,7 +11,6 @@ import java.util.*;
 
 public final class AnimalAppetite extends JavaPlugin {
     public static final HashMap<EntityType, ArrayList<Material>> DIET_MAP = new HashMap<>();
-    public static final HashSet<Material> FOOD_SET = new HashSet<>();
 
     @Override
     public void onEnable() {
@@ -45,7 +44,7 @@ public final class AnimalAppetite extends JavaPlugin {
         if (scoreboard.getTeam("infertile") == null) scoreboard.registerNewTeam("infertile");
         scoreboard.getTeam("infertile").setColor(GLOW_COLOR);
 
-        // HashMap Initialization
+        // Diet Map Initialization
         DIET_MAP.put(EntityType.HORSE,
                 new ArrayList<>(Arrays.asList(Material.GOLDEN_APPLE, Material.GOLDEN_CARROT)));
         DIET_MAP.put(EntityType.CHICKEN,
@@ -66,10 +65,6 @@ public final class AnimalAppetite extends JavaPlugin {
                 new ArrayList<>(Arrays.asList(Material.COOKED_BEEF, Material.COOKED_CHICKEN, Material.COOKED_MUTTON,
                         Material.COOKED_PORKCHOP, Material.COOKED_RABBIT, Material.BEEF, Material.CHICKEN,
                         Material.MUTTON, Material.PORKCHOP, Material.ROTTEN_FLESH, Material.RABBIT)));
-
-        // HashSet Initialization
-        // First read config for correct foods
-        // Then add food to HashSet
     }
 
     @Override

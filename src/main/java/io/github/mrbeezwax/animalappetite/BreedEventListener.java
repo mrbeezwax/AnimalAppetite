@@ -32,6 +32,8 @@ public class BreedEventListener implements Listener {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
+                dad.setBreed(true);
+                mom.setBreed(true);
                 event.getFather().setGlowing(false);
                 event.getMother().setGlowing(false);
                 infertile.removeEntry(event.getMother().getUniqueId().toString());

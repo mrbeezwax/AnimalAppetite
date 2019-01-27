@@ -24,7 +24,7 @@ After breeding completes, the parents will glow red to indicate that they are no
 - AnimalAppetite.aasetcolor
 
 ### Known Issues
-- [ ] Animals that are tamed by their owners will have the same glow color as its owner (default is white)
+- Animals that are tamed by their owners will have the same glow color as its owner (default is white)
 
 ### Contact
 Got questions, suggestions, or want a plugin created? Add me on Discord and direct message me @ **friendlynood#1531**

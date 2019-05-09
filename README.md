@@ -11,6 +11,11 @@ After breeding completes, the parents will glow red to indicate that they are no
 
 /aasetcolor - *OPS only* Sets the glow color
 
+### Configurations
+breeding-requirement: 1 <- Number of food required to breed
+
+glow-color: DARK_RED <- Color of animals during cooldown; See config for list of available colors
+
 ### Features
 - Indicate when animals are ready for breeding
 - Set number of food required for breeding

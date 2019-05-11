@@ -25,8 +25,8 @@ glow-color: DARK_RED <- Color of animals during cooldown; See config for list of
 - Change cooldown time for breeding
 
 ### Permissions
-- AnimalAppetite.aaset
-- AnimalAppetite.aasetcolor
+- AnimalAppetite.aaset <- Allows change of breeding requirement
+- AnimalAppetite.aasetcolor <- Allows change of glow color
 
 ### Known Issues
 - Animals that are tamed by their owners will have the same glow color as its owner (default is white)
